@@ -14,7 +14,7 @@ import { DataHeatmapChartType } from './heatmapChart.data';
 import { useEffect, useState } from 'react';
 import { COLOR } from '../../shared/constants/color';
 
-const CustomHeatmapChart = ({ data, wFull }: Props) => {
+const CustomHeatmapChart = ({ data, wFull, variousCol, title }: Props) => {
 
   const [dataKeys, setDataKeys] = useState<string []>([])
 
@@ -27,7 +27,7 @@ const CustomHeatmapChart = ({ data, wFull }: Props) => {
   }
 
   useEffect(() => {
-    if(data) getObjectKeys(data)
+    if(data.length > 0) getObjectKeys(data)
   }, [])
 
 
@@ -39,7 +39,7 @@ const CustomHeatmapChart = ({ data, wFull }: Props) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
     >
-      <h2 className="text-lg font-medium text-gray-100">Sales by Channel</h2>
+      <h2 className="text-lg font-medium text-gray-100 mb-3">{title}</h2>
       <div className="h-80">
         <ResponsiveContainer>
           <BarChart data={data}>
@@ -56,7 +56,7 @@ const CustomHeatmapChart = ({ data, wFull }: Props) => {
             <Legend />
 
             {
-              dataKeys.map((key, index) => <Bar key={index} dataKey={key} stackId='a' fill={COLOR[index % COLOR.length]} />)
+              dataKeys.map((key, index) => <Bar key={index} dataKey={key} stackId={variousCol ? key : 'a'} fill={COLOR[index % COLOR.length]} />)
             }
 						
           </BarChart>
@@ -71,4 +71,6 @@ export default CustomHeatmapChart;
 type Props = {
   data: DataHeatmapChartType[];
   wFull?: boolean
+  title: string
+  variousCol?: boolean
 };

@@ -4,6 +4,7 @@ import ProductsPage from "../../pages/ProductsPage"
 import UsersPage from "../../pages/UsersPage"
 import SalesPage from "../../pages/SalesPage"
 import AnaliticsPage from "../../pages/AnaliticsPage"
+import SettingsPage from "../../pages/SettingsPage"
 
 export const ROUTES_APP:IRoutes[] = [
   {
@@ -25,6 +26,10 @@ export const ROUTES_APP:IRoutes[] = [
   {
     path: '/analitics',
     element: AnaliticsPage
+  },
+  {
+    path: '/settings',
+    element: SettingsPage
   }
 ]
 
