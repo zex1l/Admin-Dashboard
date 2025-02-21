@@ -1,4 +1,4 @@
-export const SaleChartData: ISalesChart[] = [
+export const saleChartData: ISalesChart[] = [
   { name: 'Jul', value: 4200 },
   { name: 'Aug', value: 3800 },
   { name: 'Sep', value: 5100 },

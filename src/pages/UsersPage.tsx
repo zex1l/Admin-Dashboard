@@ -1,9 +1,5 @@
 import { motion } from 'framer-motion';
 import {
-  Zap,
-  Users,
-  ShoppingBag,
-  BarChart2,
   UserIcon,
   UserCheck,
   UserX,
@@ -14,7 +10,7 @@ import Header from '../widgets/Header/Header';
 import UserTable from '../widgets/UserTable/UserTable';
 import { usersData } from '../widgets/UserTable/userTable.data';
 import CustomLineChart from '../widgets/CustomLineChart/SalesChart';
-import { SaleChartData } from '../widgets/CustomLineChart/salesChart.data';
+import { saleChartData } from '../widgets/CustomLineChart/salesChart.data';
 import CustomHeatmapChart from '../widgets/CustomHeatmapChart/CustomHeatmapChart';
 import { userActivityData } from '../widgets/CustomHeatmapChart/heatmapChart.data';
 import CustomPieChart from '../widgets/CustomPieChart/CustomPieChart';
@@ -74,8 +70,8 @@ const UsersPage = () => {
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
-          <CustomLineChart data={SaleChartData} typeLine={'natural'} title='Users Grows'/>
-          <CustomHeatmapChart data={userActivityData}/>
+          <CustomLineChart data={saleChartData} typeLine={'natural'} title='Users Grows'/>
+          <CustomHeatmapChart data={userActivityData} title='User Activity'/>
           <CustomPieChart data={userDemographicsData} wFull title='User Demographics'/>
         </div>
       </main>

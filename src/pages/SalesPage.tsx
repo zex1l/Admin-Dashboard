@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { Package, TrendingUp, AlertTriangle, DollarSign, ShoppingCart, CreditCard } from "lucide-react";
+import {  TrendingUp, DollarSign, ShoppingCart, CreditCard } from "lucide-react";
 import StatCard from "../shared/ui/StatCard/StatCard";
 import Header from "../widgets/Header/Header";
 import CustomAreaChart from "../widgets/CustomAreaChart/CustomAreaChart";
 import { monthlySalesData } from "../widgets/CustomAreaChart/areChart.data";
 import CustomPieChart from "../widgets/CustomPieChart/CustomPieChart";
 import CustomBarChart from "../widgets/CustomBarChart/CustomBarChart";
+import { userDemographicsData } from "../widgets/CustomPieChart/pieChart.data";
 
 
 const SalesPage = () => {
@@ -49,8 +50,8 @@ const SalesPage = () => {
         </motion.div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
           <CustomAreaChart title='Sales Overview' data={monthlySalesData} wFull/>
-          <CustomPieChart title="Sales Pie" data={monthlySalesData} />
-          <CustomBarChart data={monthlySalesData} title='Dayly Sales Trend'/>
+          <CustomPieChart title="Sales Pie" data={userDemographicsData} />
+          <CustomBarChart data={userDemographicsData} title='Dayly Sales Trend'/>
         </div>
         
       </main>

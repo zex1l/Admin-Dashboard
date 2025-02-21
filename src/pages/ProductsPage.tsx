@@ -6,7 +6,7 @@ import ProductsTable from '../widgets/ProductsTable/ProductsTable';
 import CustomLineChart from '../widgets/CustomLineChart/SalesChart';
 import CustomPieChart from '../widgets/CustomPieChart/CustomPieChart';
 import { PieChartData } from '../widgets/CustomPieChart/pieChart.data';
-import { SaleChartData } from '../widgets/CustomLineChart/salesChart.data';
+import { saleChartData } from '../widgets/CustomLineChart/salesChart.data';
 import { productsData } from '../widgets/ProductsTable/productsTable.data';
 
 const ProductsPage = () => {
@@ -54,7 +54,7 @@ const ProductsPage = () => {
         <ProductsTable data={productsData} title='Products List' colNames={['Name', 'Category', 'Price', 'Stock', 'Sales', 'Actions']}/>
 
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8'>
-            <CustomLineChart data={SaleChartData.slice(0, 6)} withLegend typeLine='linear' title='Products overview'/>
+            <CustomLineChart data={saleChartData.slice(0, 6)} withLegend typeLine='linear' title='Products overview'/>
             <CustomPieChart title='Products Overview' data={PieChartData} />
         </div>
       </main>

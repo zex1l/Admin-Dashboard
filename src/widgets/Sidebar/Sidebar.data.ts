@@ -4,7 +4,6 @@ import {
   LucideProps,
   Settings,
   ShoppingBag,
-  ShoppingCart,
   TrendingUp,
   Users,
 } from 'lucide-react';

@@ -4,7 +4,7 @@ import StatCard from '../shared/ui/StatCard/StatCard';
 import { BarChart2, ShoppingBag, Users, Zap } from 'lucide-react';
 import CustomLineChart from '../widgets/CustomLineChart/SalesChart';
 import CustomBarChart from '../widgets/CustomBarChart/CustomBarChart';
-import { SaleChartData } from '../widgets/CustomLineChart/salesChart.data';
+import { saleChartData } from '../widgets/CustomLineChart/salesChart.data';
 import CustomPieChart from '../widgets/CustomPieChart/CustomPieChart';
 import { PieChartData } from '../widgets/CustomPieChart/pieChart.data';
 
@@ -51,7 +51,7 @@ const OverviewPage = () => {
         </motion.div>
 
         <div className='grid grid-cols-1 gap-8 lg:grid-cols-2 '>
-          <CustomLineChart data={SaleChartData } title='Sales overview'/>
+          <CustomLineChart data={saleChartData } title='Sales overview'/>
           <CustomPieChart data={PieChartData} title='Category Distribution'/>
           <CustomBarChart data={PieChartData} wFull title='Sales by Channel'/>
         </div>
